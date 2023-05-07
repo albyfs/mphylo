@@ -1,2 +1,2 @@
 # mphylo
-Multifurcated Phylogenetic Trees
+Multifurcated Phylogenetic Trees in R
