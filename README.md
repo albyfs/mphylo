@@ -3,7 +3,7 @@ Multifurcated Phylogenetic Trees in R
 
 ## Description
 
-[R](https://www.r-project.org) package [mphylo](https://github.com/albyfs/mphylo) offers a MultiFurcating version of the Neighbor-Joining method for reconstructing phylogenetic trees. Multifurcated phylogenetic trees can group more than two clusters when tied distances occur, and therefore they do not depend on the order of the input taxa.
+[R](https://www.r-project.org) package [mphylo](https://github.com/albyfs/mphylo) offers a **MultiFurcating** version of the **Neighbor-Joining** method for reconstructing phylogenetic trees. Multifurcated phylogenetic trees can group more than two clusters when **tied distances** occur, and therefore they do not depend on the order of the input taxa.
 
 This functionality is obtained with the function `mfnj`, which may be considered as a replacement for function `nj` (in package [ape](https://CRAN.R-project.org/package=ape)).
 
