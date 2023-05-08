@@ -25,6 +25,48 @@ There exist two main ways to install [mphylo](https://github.com/albyfs/mphylo):
 Since [mphylo](https://github.com/albyfs/mphylo) includes C++ code, you may need to install first [Rtools](https://cran.r-project.org/bin/windows/Rtools/) in Windows, or [Xcode](https://developer.apple.com/xcode/) in MacOS.
 
 
+## Example
+
+```{r}
+library(mphylo)
+```
+
+Let us create a matrix with phylogenetic distances between taxa:
+
+```{r}
+m <- matrix(0, 9, 9)
+m[lower.tri(m)] <- c(1.3, 4.3, 4.3, 2.7, 3.0, 1.7, 2.0,  8.7,
+                          4.3, 4.3, 2.3, 3.0, 1.7, 2.0,  8.0,
+                               0.7, 5.0, 1.3, 2.7, 3.0, 10.0,
+                                    5.0, 1.3, 2.7, 3.0, 10.0,
+                                         3.7, 2.3, 2.7, 10.0,
+                                              2.0, 2.3,  8.7,
+                                                   0.3,  9.0,
+                                                         9.4)
+x <- as.dist(m)
+attr(x, "Labels") <- c("Abruzzo", "Pyrenees", "Kodiak", "Captive-3",
+                       "Captive-4", "Captive-5", "Grizzly", "Polar-2", "Black")
+```
+
+Now we can reconstruct a phylogenetic tree from these distances:
+
+```{r}
+t <- mfnj(x, digits = 6)
+```
+
+The summary of the resulting phylogenetic tree is:
+
+```{r}
+summary(t)
+```
+
+And we can also plot this phylogenetic tree:
+
+```{r}
+plot(t)
+```
+
+
 ## Author
 
 - **Alberto Fernández**: Dept. Enginyeria Química, Universitat Rovira i Virgili, Tarragona (Spain). ([email](mailto:alberto.fernandez@urv.cat?subject=[mphylo])) ([ORCID](https://orcid.org/0000-0002-1241-1646)) ([Google Scholar](https://scholar.google.es/citations?user=AbH4r0IAAAAJ)) ([GitHub](https://github.com/albyfs))
