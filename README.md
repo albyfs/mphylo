@@ -31,7 +31,7 @@ Since [mphylo](https://github.com/albyfs/mphylo) includes C++ code, you may need
 library(mphylo)
 ```
 
-Let us create a matrix with phylogenetic distances between taxa:
+Let us first create a matrix of phylogenetic distances between taxa:
 
 ```{r}
 m <- matrix(0, 9, 9)
