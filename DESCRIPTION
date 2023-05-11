@@ -1,6 +1,6 @@
 Package: mphylo
 Version: 0.1.0
-Date: 2023-05-08
+Date: 2023-05-11
 Title: Multifurcated Phylogenetic Trees
 Description: A MultiFurcating version of the Neighbor-Joining method for 
     reconstructing phylogenetic trees. Multifurcated phylogenetic trees can 
