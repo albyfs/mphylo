@@ -1,4 +1,4 @@
-#include <algorithm>  // std::max
+#include <algorithm>  // std::max, std::min
 #include <cmath>  // std::floor, std::log10
 #include <sstream>  // std::ostringstream
 #include <string>  // std::string
@@ -15,18 +15,12 @@ Rcpp::List rcppMfnj(const Rcpp::StringVector& labels,
 	Matrix dist(Rcpp::as< std::vector<double> >(x));
 	if (digits < 0) {
 		digits = dist.precision();
-	} else {
-		// Check maximum precision
-		double maxDist = std::max(dist.maxValue(), 1.0);
-		int intDigits = 1 + (int)std::floor(std::log10(maxDist));
-		int maxPrecision = MAX_DIGITS - intDigits - 1;
-		if (digits > maxPrecision) {
-			std::ostringstream oss;
-			oss << "'digits' for these data must be less than or equal to "
-					<< maxPrecision;
-			Rcpp::stop(oss.str());
-		}
 	}
+	// Check maximum precision
+	double maxDist = std::max(dist.maxValue(), 1.0);
+	int intDigits = 1 + (int)std::floor(std::log10(maxDist));
+	int maxPrecision = MAX_DIGITS - intDigits - 1;
+	digits = std::min(digits, maxPrecision);
 	// Reconstruct phylogenetic tree from distances
 	Phylogeny* phylo = new Phylogeny(dist, digits);
 	phylo->reconstruct();
