@@ -1,6 +1,6 @@
 mfnj <- function(x, digits = NULL) {
 	# Check parameters
-	if (class(x) != "dist") {
+	if (!inherits(x, "dist")) {
 		stop("'x' must be an object of class \"dist\"")
 	}
 	if (attr(x, "Size") < 3L) {
