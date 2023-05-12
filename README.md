@@ -25,7 +25,33 @@ There exist two main ways to install [mphylo](https://github.com/albyfs/mphylo):
 Since [mphylo](https://github.com/albyfs/mphylo) includes C++ code, you may need to install first [Rtools](https://cran.r-project.org/bin/windows/Rtools/) in Windows, or [Xcode](https://developer.apple.com/xcode/) in MacOS.
 
 
-## Example
+## Tutorial
+
+### Usage
+
+```{r eval = FALSE}
+mfnj(x, digits = NULL)
+```
+
+| Argument | Description |
+| :--- | :--- |
+| `x` | A structure of class `dist` containing non-negative distances. |
+| `digits` | An integer value specifying the precision, i.e., the number of significant decimal digits to be used for the comparisons between distances. This is an important parameter, since equal distances at a certain precision may become different by increasing its value. Thus, it may be responsible of the existence of tied distances. If the value of this parameter is negative or `NULL` (default), then the precision is automatically set to that of the input distance with the largest number of significant decimal digits. |
+
+### Result
+
+An object of class `mfnj` that describes the multifurcated phylogenetic tree obtained. The object is a list with the following components:
+
+| Component | Description |
+| :--- | :--- |
+| `call` | The call that produced the result. |
+| `digits` | Number of significant decimal digits used as precision. |
+| `size` | Number of taxa. |
+| `labels` | Labels of the taxa. |
+| `nwk` | A string describing the output phylogenetic tree in Newick format. |
+| `polytomies` | Number of polytomies in the phylogenetic tree. |
+
+### Example
 
 ```{r}
 library(mphylo)
