@@ -93,6 +93,11 @@ plot(t)
 ```
 
 
+## Reference
+
+A. Fernández, N. Segura-Alabart, F. Serratosa. The MultiFurcating Neighbor-Joining Algorithm for Reconstructing Polytomic Phylogenetic Trees. _Journal of Molecular Evolution_ **91**, 773–779 (2023). DOI:[10.1007/s00239-023-10134-z](https://doi.org/10.1007/s00239-023-10134-z).
+
+
 ## Author
 
 - **Alberto Fernández**: Dept. Enginyeria Química, Universitat Rovira i Virgili, Tarragona (Spain). ([email](mailto:alberto.fernandez@urv.cat?subject=[mphylo])) ([ORCID](https://orcid.org/0000-0002-1241-1646)) ([Google Scholar](https://scholar.google.es/citations?user=AbH4r0IAAAAJ)) ([GitHub](https://github.com/albyfs))
