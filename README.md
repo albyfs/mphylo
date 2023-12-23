@@ -20,7 +20,7 @@ There exist two main ways to install [mphylo](https://github.com/albyfs/mphylo):
     ```
 - Installation from source tarball:
     ```{r eval = FALSE}
-    install.packages("mphylo_1.0.0.tar.gz", repos = NULL, type = "source")
+    install.packages("mphylo-1.0.0.tar.gz", repos = NULL, type = "source")
     ```
 Since [mphylo](https://github.com/albyfs/mphylo) includes C++ code, you may need to install first [Rtools](https://cran.r-project.org/bin/windows/Rtools/) in Windows, or [Xcode](https://developer.apple.com/xcode/) in MacOS.
 
