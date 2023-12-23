@@ -1,12 +1,11 @@
 \name{mfnj}
 \alias{mfnj}
-\alias{plot.mfnj}
 \title{MultiFurcating Neighbor-Joining}
 \description{
 		A MultiFurcating version of the Neighbor-Joining method for reconstructing
-		phylogenetic trees. Multifurcated phylogenetic trees can group more than two
-		clusters when tied distances occur, and therefore they do not depend on the
-		order of the input taxa.
+		phylogenetic trees (Fernandez et al., 2023). Multifurcated phylogenetic
+		trees can group more than two clusters when tied distances occur, and
+		therefore they do not depend on the order of the input taxa.
 }
 \usage{
 mfnj(x, digits = NULL)
@@ -36,12 +35,16 @@ mfnj(x, digits = NULL)
     \item{polytomies}{Number of polytomies in the phylogenetic tree.}
 
     Class \code{"mfnj"} has methods for the following generic functions:
-    \code{\link{summary}} and \code{\link{plot}}.
+    \code{\link{print}}, \code{\link{summary}} and \code{\link{plot}}.
 }
 \author{
     Alberto Fernandez \email{alberto.fernandez@urv.cat}.
 }
 \references{
+    Fernandez, A.; Segura-Alabart, N.; Serratosa, F. (2023). The MultiFurcating
+    Neighbor-Joining algorithm for reconstructing polytomic phylogenetic trees.
+    \emph{Journal of Molecular Evolution}, \bold{91}, 773--779.
+
     Randi, E.; Gentile, L.; Boscagli, G.; Huber, D.; Roth, H.U. (1994).
     Mitochondrial DNA sequence divergence among some west European brown bear
     (\emph{Ursus arctos} L.) populations. Lessons for conservation.
