@@ -41,19 +41,25 @@ mfnj <- function(x, digits = NULL) {
 		class = "mfnj")
 }
 
-summary.mfnj <- function(object, ...) {
+print.mfnj <- function(x, ...) {
 	# Print call
 	cat("Call:\n", sep="")
-	cl <- object$call
+	cl <- x$call
 	cat(deparse(cl[[1L]]), "(x = ", deparse(cl$x), ",\n", sep="")
-	cat("     digits = ", object$digits, ")\n\n", sep="")
+	cat("     digits = ", x$digits, ")\n\n", sep="")
 	# Print size
-	cat("Number of taxa: ", object$size, "\n\n", sep="")
+	cat("Number of taxa: ", x$size, "\n\n", sep="")
 	# Print labels
 	cat("Labels:\n", sep="")
-	print(object$labels, ...)
+	print(x$labels, ...)
+	cat("\n")
+	invisible(x)
+}
+
+summary.mfnj <- function(object, ...) {
+	print(object, ...)
 	# Print Newick
-	cat("\nNewick tree:\n", sep="")
+	cat("Newick tree:\n", sep="")
 	cat(object$nwk, "\n\n", sep="")
 	# Print polytomies
 	cat("Number of polytomies: ", object$polytomies, "\n", sep="")
