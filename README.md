@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/637482691.svg)](https://zenodo.org/doi/10.5281/zenodo.10428226)
+
 # mphylo
 Multifurcated Phylogenetic Trees in R
 
