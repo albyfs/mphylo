@@ -1,16 +1,17 @@
 Package: mphylo
-Version: 0.1.0
-Date: 2023-05-11
+Version: 1.0.0
+Date: 2023-12-23
 Title: Multifurcated Phylogenetic Trees
 Description: A MultiFurcating version of the Neighbor-Joining method for 
     reconstructing phylogenetic trees. Multifurcated phylogenetic trees can 
     group more than two clusters when tied distances occur, and therefore they 
     do not depend on the order of the input taxa.
-Encoding: latin1
-Authors@R: c(person(given = "Alberto", family = "Fernández",
+Encoding: UTF-8
+Authors@R: c(person(given = "Alberto", family = "Fernandez",
                     email = "alberto.fernandez@urv.cat",
                     role = c("aut", "cre"),
                     comment = c(ORCID = "0000-0002-1241-1646")))
 License: AGPL-3
-Imports: ape (>= 5.7-1), Rcpp (>= 1.0.10)
+Imports: ape, Rcpp
 LinkingTo: Rcpp
+NeedsCompilation: yes

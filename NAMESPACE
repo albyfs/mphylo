@@ -1,9 +1,10 @@
-export(mfnj)
-
-S3method(plot, mfnj)
-S3method(summary, mfnj)
+useDynLib(mphylo, .registration = TRUE)
 
 importFrom(ape, plot.phylo, read.tree)
 importFrom(Rcpp, evalCpp)
 
-useDynLib(mphylo, .registration = TRUE)
+export(mfnj)
+
+S3method(plot, mfnj)
+S3method(print, mfnj)
+S3method(summary, mfnj)
