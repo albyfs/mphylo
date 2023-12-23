@@ -1,0 +1,10 @@
+bibentry(bibtype = "Article",
+    author = c(person(given="Alberto", family="Fernandez"),
+               person(given="Natalia", family="Segura-Alabart"),
+               person(given="Francesc", family="Serratosa")),
+    year = "2023",
+    title = "The MultiFurcating Neighbor-Joining Algorithm for Reconstructing Polytomic Phylogenetic Trees",
+    journal = "Journal of Molecular Evolution",
+    volume = "91",
+    pages = "773--779",
+    doi = "10.1007/s00239-023-10134-z")
